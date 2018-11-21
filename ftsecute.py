@@ -45,8 +45,8 @@ def writeDisplay(texto):
 
 #Function falar palavras
 def speakText(texto):
-    cmd_beg= 'espeak -v pt-br'
-    cmd_end= ' 2>/dev/null'
+    cmd_beg= 'espeak -vpt-br+f1 "'
+    cmd_end= '" 2>/dev/null'
     call([cmd_beg+texto+cmd_end], shell=True)
 
 writeDisplay("Cacique")
