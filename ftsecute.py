@@ -68,7 +68,7 @@ def writeDisplay(texto):
     # font = ImageFont.truetype('Minecraftia.ttf', 8)
 
     # Write some text.
-    draw.text((8,30), text, font=font)
+    draw.text((8,30), texto, font=font)
 
     # Display image.
     disp.image(image)
