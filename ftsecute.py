@@ -38,6 +38,7 @@ def writeDisplay(texto):
     draw.text((8,30), texto, font=font)
     disp.display()
 
+writeDisplay("Cacique")
 
 print('Pressione Ctrl-C para sair.')
 while True:
