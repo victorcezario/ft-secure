@@ -17,6 +17,9 @@ import faceRecognition
 #LEDS
 import RPi.GPIO as GPIO
 
+#ESPEAK
+from espeak import espeak
+espeak.set_voice("pt-br")
 
 #Function escreve display
 def writeDisplay(texto):
@@ -39,7 +42,10 @@ def writeDisplay(texto):
     disp.display()
 
 writeDisplay("Cacique")
+espeak.synth("Teste de Audio")
 
+while espeak.is_playing:
+	pass
 print('Pressione Ctrl-C para sair.')
 while True:
     time.sleep(1.0)
