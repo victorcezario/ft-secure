@@ -15,7 +15,7 @@ from subprocess import Popen
 import subprocess
 from time import sleep
 #from Naked.toolshed.shell import execute_js, muterun_js
-def recognition():
+def main():
     lang = "en"
     recognizer = cv2.face.LBPHFaceRecognizer_create()
     recognizer.read('train/trainer.yml')
@@ -82,3 +82,4 @@ def recognition():
     print("\n [INFO] Exiting Program and cleanup stuff")
     cam.release()
     cv2.destroyAllWindows()
+    return True

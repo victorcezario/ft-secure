@@ -62,7 +62,7 @@ def speakText(texto):
 writeDisplay("Cacique")
 speakText("Olá Seja bem vindo ao FT Secure")
 
-faceRecognition.recognition()
+faceRecognition.main()
 
 
 print('Pressione Ctrl-C para sair.')
