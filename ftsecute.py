@@ -58,7 +58,8 @@ def speakText(texto):
     call([cmd_beg+texto+cmd_end], shell=True)
 
 writeDisplay("Cacique")
-speakText("Olá Seja bem vindo ao FT Secure")
+
+speakText("Ola Seja bem vindo ao FT Secure")
 
 faceRecognition.main()
 
