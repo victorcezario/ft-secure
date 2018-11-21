@@ -69,7 +69,7 @@ def main():
             break
 
     # Do a bit of cleanup
-    print("\n [INFO] Exiting Program and cleanup stuff")
+    print("\n [INFO] Finalizando Programa")
     cam.release()
     cv2.destroyAllWindows()
     return True
