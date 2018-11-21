@@ -5,6 +5,7 @@ import Adafruit_GPIO.SPI as SPI
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+
 #Bibliotecas OpenCV
 import cv2
 import os
@@ -18,8 +19,9 @@ import faceRecognition
 import RPi.GPIO as GPIO
 
 #ESPEAK
-from espeak import espeak
-espeak.set_voice("pt-br")
+from num2words import num2words
+from subprocess import call
+
 
 #Function escreve display
 def writeDisplay(texto):
@@ -41,11 +43,15 @@ def writeDisplay(texto):
     draw.text((8,30), texto, font=font)
     disp.display()
 
-writeDisplay("Cacique")
-espeak.synth("Teste de Audio")
+#Function falar palavras
+def speakText(texto):
+    cmd_beg= 'espeak -v pt-br'
+    cmd_end= ' 2>/dev/null'
+    call([cmd_beg+texto+cmd_end], shell=True)
 
-while espeak.is_playing:
-	pass
+writeDisplay("Cacique")
+speakText("Teste de Audio")
+
 print('Pressione Ctrl-C para sair.')
 while True:
     time.sleep(1.0)
