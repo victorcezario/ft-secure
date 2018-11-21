@@ -6,12 +6,20 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 #Bibliotecas OpenCV
-import RPi.GPIO as GPIO
-import time
-import keyboard
+from imutils import paths
+import cv2
+import os
+import glob
+
 import faceDataset
 import faceTraining
 import faceRecognition
+
+#LEDS
+import RPi.GPIO as GPIO
+import time
+import keyboard
+
 
 #Function escreve display
 def writeDisplay(texto):
