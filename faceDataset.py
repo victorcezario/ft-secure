@@ -11,7 +11,7 @@ Developed by Marcelo Rovai - MJRoBot.org @ 21Feb18
 
 import cv2
 import os
-def dataset():
+def main():
     cam = cv2.VideoCapture(0)
     cam.set(3, 640) # set video width
     cam.set(4, 480) # set video height
@@ -52,5 +52,6 @@ def dataset():
     print("\n [INFO] Finalizando Programa")
     cam.release()
     cv2.destroyAllWindows()
+    return True
 
 

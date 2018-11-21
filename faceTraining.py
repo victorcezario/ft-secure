@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 import os
 
-def training():
+def main():
     path = 'dataset'
 
     recognizer = cv2.face.LBPHFaceRecognizer_create()
@@ -36,3 +36,4 @@ def training():
     recognizer.write('train/trainer.yml')
 
     print("\n [INFO] {0} faces treinadas. Finalizando o Programa".format(len(np.unique(ids))))
+    return True

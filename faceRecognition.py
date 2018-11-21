@@ -73,4 +73,3 @@ def main():
     cam.release()
     cv2.destroyAllWindows()
     return True
-main()
