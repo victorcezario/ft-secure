@@ -45,9 +45,9 @@ def writeDisplay(texto):
     draw.rectangle((0,0,LCD.LCDWIDTH,LCD.LCDHEIGHT), outline=255, fill=255)
     # Load default font.
     font = ImageFont.load_default()
-    
+
     # Write some text.
-    draw.text((8,30), texto, font=font)
+    draw.text((3,30), texto, font=font)
 
     # Display image.
     disp.image(image)
@@ -60,7 +60,9 @@ def speakText(texto):
     call([cmd_beg+texto+cmd_end], shell=True)
 
 writeDisplay("Cacique")
-speakText("Teste de Audio")
+speakText("Olá Seja bem vindo ao FT Secure")
+ret = faceRecognition.recognition()
+
 
 print('Pressione Ctrl-C para sair.')
 while True:
