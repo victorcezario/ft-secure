@@ -47,7 +47,7 @@ def writeDisplay(texto):
     font = ImageFont.load_default()
     
     # Write some text.
-    draw.text((8,30), texto, font=font)
+    draw.text((2,10), texto, font=font)
 
     # Display image.
     disp.image(image)
