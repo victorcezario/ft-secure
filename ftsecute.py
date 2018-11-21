@@ -16,8 +16,6 @@ import faceRecognition
 
 #LEDS
 import RPi.GPIO as GPIO
-import time
-import keyboard
 
 
 #Function escreve display
