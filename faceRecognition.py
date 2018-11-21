@@ -82,4 +82,8 @@ def main():
     print("\n [INFO] Exiting Program and cleanup stuff")
     cam.release()
     cv2.destroyAllWindows()
+<<<<<<< HEAD
     return True
+=======
+main()
+>>>>>>> 28301fd72bd246d8837d869169460b6f9fea83ac
