@@ -22,6 +22,10 @@ import RPi.GPIO as GPIO
 from num2words import num2words
 from subprocess import call
 
+# Define Status dos botões
+GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-25
+GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-8
+GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-7
 
 #Function escreve display
 def writeDisplay(texto):
@@ -57,11 +61,19 @@ def speakText(texto):
     cmd_end= '" 2>/dev/null'
     call([cmd_beg+texto+cmd_end], shell=True)
 
-writeDisplay("Cacique")
-speakText("Ola Seja bem vindo ao FT Secure")
+try:
+    while True:
+         button_one_state = GPIO.input(25)
+         button_two_state = GPIO.input(8)
+         button_tree_state = GPIO.input(7)
 
-faceRecognition.main()
+         #Ação do Botão 1
+         if button_one_state == False or keyboard.is_pressed('1'):
+            writeDisplay("FT SECURE")
+            speakText("Ola Seja bem vindo ao FT Secure")
 
-print('Pressione Ctrl-C para sair.')
-while True:
-    time.sleep(1.0)
+            faceRecognition.main()
+
+            print('Pressione Ctrl-C para sair.')
+            while True:
+                time.sleep(1.0)
