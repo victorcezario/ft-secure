@@ -72,9 +72,7 @@ try:
          if button_one_state == False or keyboard.is_pressed('1'):
             writeDisplay("FT SECURE")
             speakText("Ola Seja bem vindo ao FT Secure")
-
             faceRecognition.main()
-
             print('Pressione Ctrl-C para sair.')
             while True:
                 time.sleep(1.0)
