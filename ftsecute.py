@@ -1,3 +1,4 @@
+# coding=utf-8
 #Bibliotecas Nokia 5110
 import time
 import Adafruit_Nokia_LCD as LCD
