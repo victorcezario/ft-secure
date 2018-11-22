@@ -71,7 +71,7 @@ try:
          button_tree_state = GPIO.input(7)
 
          #Ação do Botão 1
-         if button_one_state == False or keyboard.is_pressed('1'):
+         if button_one_state == False:
             writeDisplay("FT SECURE")
             speakText("Ola Seja bem vindo ao FT Secure")
             faceRecognition.main()
