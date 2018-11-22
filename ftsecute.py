@@ -76,4 +76,5 @@ try:
             print('Pressione Ctrl-C para sair.')
             while True:
                 time.sleep(1.0)
-
+except:
+    GPIO.cleanup()
