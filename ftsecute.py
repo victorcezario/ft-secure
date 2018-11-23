@@ -75,17 +75,17 @@ try:
          if button_one_state == False:
             writeDisplay("FT SECURE")
             speakText("Ola Seja bem vindo ao FT Secure")
-            faceRecognition.main()
+            #faceRecognition.main()
             print('Pressione Ctrl-C para sair.')
          elif button_two_state == False:
             writeDisplay("FT SECURE")
             speakText("Ola Seja bem vindo ao FT Secure")
-            faceRecognition.main()
+            #faceRecognition.main()
             print('Pressione Ctrl-C para sair.')
          elif button_tree_state == False:
             writeDisplay("FT SECURE")
             speakText("Ola Seja bem vindo ao FT Secure")
-            faceRecognition.main()
+            #faceRecognition.main()
             print('Pressione Ctrl-C para sair.')
             
 except:
