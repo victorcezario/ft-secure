@@ -32,9 +32,9 @@ nokia.writeDisplay("FT SECURE")
 
 try:
     while True:
-         button_one_state = True: #GPIO.input(2)
-         button_two_state = True: #GPIO.input(8)
-         button_tree_state = True: #GPIO.input(7)
+         button_one_state = True #GPIO.input(2)
+         button_two_state = True #GPIO.input(8)
+         button_tree_state = True #GPIO.input(7)
          #Ação do Botão 1
          if button_one_state == False:
             nokia.writeDisplay("FT SECURE")
