@@ -16,7 +16,7 @@ import RPi.GPIO as GPIO
 from num2words import num2words
 from subprocess import call
 
-GPIO.setmode(GPIO.BCM)
+#GPIO.setmode(GPIO.BCM)
 # Define Status dos botões
 GPIO.setup(2, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-25
 GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-8
