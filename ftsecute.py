@@ -68,7 +68,7 @@ writeDisplay("FT SECURE")
 
 try:
     while True:
-        button_one_state = GPIO.input(25)
+        button_one_state = GPIO.input(26)
         button_two_state = GPIO.input(8)
         button_tree_state = GPIO.input(7)
         #Ação do Botão 1
