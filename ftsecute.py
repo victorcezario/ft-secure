@@ -68,17 +68,25 @@ writeDisplay("FT SECURE")
 
 try:
     while True:
-         button_one_state = GPIO.input(25)
-         button_two_state = GPIO.input(8)
-         button_tree_state = GPIO.input(7)
-
-         #Ação do Botão 1
-         if button_one_state == False:
+        button_one_state = GPIO.input(25)
+        button_two_state = GPIO.input(8)
+        button_tree_state = GPIO.input(7)
+        #Ação do Botão 1
+        if button_one_state == False:
             writeDisplay("FT SECURE")
             speakText("Ola Seja bem vindo ao FT Secure")
             faceRecognition.main()
             print('Pressione Ctrl-C para sair.')
-            while True:
-                time.sleep(1.0)
+        elif button_two_state == False:
+            writeDisplay("FT SECURE")
+            speakText("Ola Seja bem vindo ao FT Secure")
+            faceRecognition.main()
+            print('Pressione Ctrl-C para sair.')
+        elif button_tree_state == False:
+            writeDisplay("FT SECURE")
+            speakText("Ola Seja bem vindo ao FT Secure")
+            faceRecognition.main()
+            print('Pressione Ctrl-C para sair.')
+            
 except:
     GPIO.cleanup()
