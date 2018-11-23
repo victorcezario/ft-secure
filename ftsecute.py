@@ -36,6 +36,7 @@ def writeDisplay(texto):
     call([cmd_beg+texto+cmd_end], shell=True)
 
 writeDisplay("Bem Vindo")
+speakText("Ola Seja bem vindo ao FT Secure")
 try:
     while True:
          button_one_state = GPIO.input(2)
