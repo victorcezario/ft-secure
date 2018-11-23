@@ -9,18 +9,18 @@ import faceDataset
 import faceTraining
 import faceRecognition
 #import nokia
-#LEDS
+#Botões
 import RPi.GPIO as GPIO
 
 #ESPEAK
 from num2words import num2words
 from subprocess import call
 
-#GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM)
 # Define Status dos botões
-GPIO.setup(2, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-25
-GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-8
-GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-7
+GPIO.setup(2, GPIO.IN) # Botão GPIO-25
+GPIO.setup(8, GPIO.IN) # Botão GPIO-8
+GPIO.setup(7, GPIO.IN) # Botão GPIO-7
 
 #Function falar palavras
 def speakText(texto):
