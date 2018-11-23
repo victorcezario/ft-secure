@@ -16,11 +16,11 @@ import RPi.GPIO as GPIO
 from num2words import num2words
 from subprocess import call
 
-GPIO.setmode(GPIO.BCM)
+#GPIO.setmode(GPIO.BCM)
 # Define Status dos botões
-GPIO.setup(2, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-25
-GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-8
-GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-7
+#GPIO.setup(2, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-25
+#GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-8
+#GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-7
 
 #Function falar palavras
 def speakText(texto):
@@ -32,9 +32,9 @@ nokia.writeDisplay("FT SECURE")
 
 try:
     while True:
-         button_one_state = GPIO.input(2)
-         button_two_state = GPIO.input(8)
-         button_tree_state = GPIO.input(7)
+         button_one_state = True: #GPIO.input(2)
+         button_two_state = True: #GPIO.input(8)
+         button_tree_state = True: #GPIO.input(7)
          #Ação do Botão 1
          if button_one_state == False:
             nokia.writeDisplay("FT SECURE")
