@@ -9,7 +9,7 @@ import faceDataset
 import faceTraining
 import faceRecognition
 #import nokia
-#Botões
+#LEDS
 import RPi.GPIO as GPIO
 
 #ESPEAK
@@ -18,9 +18,10 @@ from subprocess import call
 
 GPIO.setmode(GPIO.BCM)
 # Define Status dos botões
-GPIO.setup(2, GPIO.IN) # Botão GPIO-25
-GPIO.setup(8, GPIO.IN) # Botão GPIO-8
-GPIO.setup(7, GPIO.IN) # Botão GPIO-7
+GPIO.setup(2, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-25
+GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-8
+GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-7
+
 
 #Function falar palavras
 def speakText(texto):
@@ -34,7 +35,7 @@ def writeDisplay(texto):
     cmd_beg= 'python /home/pi/positivo-ft-secure/nokia.py "'
     cmd_end= '" 2>/dev/null'
     call([cmd_beg+texto+cmd_end], shell=True)
-
+GPIO.cleanup()
 writeDisplay("Bem Vindo")
 speakText("Ola Seja bem vindo ao FT Secure")
 try:
@@ -42,6 +43,7 @@ try:
          button_one_state = GPIO.input(2)
          button_two_state = GPIO.input(8)
          button_tree_state = GPIO.input(7)
+         GPIO.cleanup()
          #Ação do Botão 1
          if button_one_state == False:
             #nokia.writeDisplay("FT SECURE")
