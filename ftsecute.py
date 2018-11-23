@@ -26,7 +26,7 @@ from subprocess import call
 # Define Status dos botões
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-25
+GPIO.setup(2, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-25
 GPIO.setup(8, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-8
 GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Botão GPIO-7
 
@@ -68,7 +68,7 @@ writeDisplay("FT SECURE")
 
 try:
     while True:
-         button_one_state = GPIO.input(25)
+         button_one_state = GPIO.input(2)
          button_two_state = GPIO.input(8)
          button_tree_state = GPIO.input(7)
          #Ação do Botão 1
