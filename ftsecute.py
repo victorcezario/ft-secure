@@ -28,7 +28,7 @@ def speakText(texto):
     cmd_end= '" 2>/dev/null'
     call([cmd_beg+texto+cmd_end], shell=True)
 
-nokia.writeDisplay("FT SECURE")
+#nokia.writeDisplay("FT SECURE")
 
 try:
     while True:
