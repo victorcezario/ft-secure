@@ -7,6 +7,7 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
+texto = sys.argv[1]
 # Raspberry Pi hardware SPI config:
 DC = 23
 RST = 24
@@ -27,7 +28,7 @@ draw.rectangle((0,0,LCD.LCDWIDTH,LCD.LCDHEIGHT), outline=255, fill=255)
 # Load default font.
 font = ImageFont.load_default()
 # Write some text.
-draw.text((2,10), "xxxxxxx", font=font)
+draw.text((2,10), texto, font=font)
 # Display image.
 disp.image(image)
 disp.display()
