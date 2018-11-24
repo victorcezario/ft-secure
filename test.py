@@ -50,7 +50,7 @@ def reconhecimento():
     escreva("Reconhecimento")
     fale("Reconhecimento Iniciado")
     faceDataset.main()
-    #faceTraining.main()
+    faceTraining.main()
 
 button_one = Button(2)
 
