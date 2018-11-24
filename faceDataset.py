@@ -52,6 +52,5 @@ while(True):
 print("\n [INFO] Finalizando Programa")
 cam.release()
 cv2.destroyAllWindows()
-return True
 
 
