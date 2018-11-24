@@ -46,8 +46,10 @@ def reconhecimento():
     escreva("Reconhecimento")
     fale("Reconhecimento Iniciado")
 
-button = Button(2)
+button_one = Button(2)
+button_two = Button(8)
+button_tree = Button(7)
 
-button.when_pressed = reconhecimento
+button_one.when_pressed = reconhecimento
 
 pause()
