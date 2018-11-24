@@ -49,8 +49,9 @@ def reconhecimento():
     print("Hello!")
     escreva("Reconhecimento")
     fale("Reconhecimento Iniciado")
-    faceDataset.main()
-    faceTraining.main()
+    #faceDataset.main()
+    #faceTraining.main()
+    faceRecognition.main()
 
 button_one = Button(2)
 

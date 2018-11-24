@@ -4,8 +4,10 @@ import os
 from subprocess import Popen
 import subprocess
 from time import sleep
+from datetime import datetime
 #from Naked.toolshed.shell import execute_js, muterun_js
 def main():
+    antes = datetime.now() # #contagem de timeout
     lang = "en"
     recognizer = cv2.face.LBPHFaceRecognizer_create()
     recognizer.read('train/trainer.yml')
@@ -18,7 +20,7 @@ def main():
     id = 0
 
     # names related to ids: example ==> Marcelo: id=1,  etc
-    names = ['None', 'Victor', 'Jhonny', 'Viado', 'Antonio', 'W']
+    names = ['None', 'Motorista 1', 'Motorista 2', 'Motorista 3', 'Motorista 4', 'Motorista 5']
 
     # Initialize and start realtime video capture
     cam = cv2.VideoCapture(0)
@@ -53,7 +55,8 @@ def main():
             if (confidence < 100):
                 if(confidence > 60 and id == 1):
                     #success = execute_js('C:\Temp\openDoor\openDoor.js  1000 130.43.105.167 admin admin')
-                    abre = 2
+                    return True
+                    break
                 id = names[id]
                 confidence = "  {0}%".format(round(100 - confidence))
             else:
@@ -63,11 +66,20 @@ def main():
             cv2.putText(img, str(id), (x+5,y-5), font, 1, (255,255,255), 2)
             cv2.putText(img, str(confidence), (x+5,y+h-5), font, 1, (255,255,0), 1)
         cv2.imshow('camera',img) 
-
+         # faz o calculo do timeout
+        agora = datetime.now()
+        diff = antes - agora
+        print(diff.seconds)
+        if (diff.seconds <= 86385):
+            print("Tempo Esgotado")
+            cv2.destroyAllWindows()
+            cam.close()
+            return False
+            break
         k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
         if k == 27:
             break
-
+    
     # Do a bit of cleanup
     print("\n [INFO] Finalizando Programa")
     cam.release()
