@@ -52,6 +52,4 @@ try:
             speakText("Ola Seja bem vindo ao FT Secure")
             #faceRecognition.main()
             print('Pressione Ctrl-C para sair.')
-            
-except:
-    print("Final")
+
