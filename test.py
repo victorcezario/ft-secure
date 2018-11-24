@@ -19,7 +19,7 @@ def escreva(texto):
     # Hardware SPI usage:
     disp = LCD.PCD8544(DC, RST, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE, max_speed_hz=4000000))
     # Initialize library.
-    disp.begin(contrast=60)
+    disp.begin(contrast=90)
     # Clear display.
     disp.clear()
     disp.display()
