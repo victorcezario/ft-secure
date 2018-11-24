@@ -1,10 +1,6 @@
 # coding=utf-8
 
 #Bibliotecas OpenCV
-import cv2
-import os
-import glob
-
 import faceDataset
 import faceTraining
 import faceRecognition
