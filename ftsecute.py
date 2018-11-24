@@ -30,10 +30,12 @@ def writeDisplay(texto):
 
 writeDisplay("Bem Vindo")
 speakText("Ola Seja bem vindo ao FT Secure")
+
+button_one_state = Button(2)
+button_two_state = Button(8)
+button_tree_state = Button(7)
 while True:
-   button_one_state = Button(2)
-   button_two_state = Button(8)
-   button_tree_state = Button(7)
+
    #Ação do Botão 1
    if button_one_state.is_pressed:
       #nokia.writeDisplay("FT SECURE")
