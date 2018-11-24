@@ -10,6 +10,7 @@ from gpiozero import Button
 from signal import pause
 from num2words import num2words
 from subprocess import call
+
 def escreva(texto):
     DC = 23
     RST = 24
@@ -35,16 +36,18 @@ def escreva(texto):
     disp.image(image)
     disp.display()
 
-def writeDisplay(texto):
-    cmd_beg= 'python /home/pi/positivo-ft-secure/nokia.py "'
+def fale(texto):
+    cmd_beg= 'espeak -vpt-br "'
     cmd_end= '" 2>/dev/null'
     call([cmd_beg+texto+cmd_end], shell=True)
 
-def say_hello():
+def reconhecimento():
     print("Hello!")
     escreva("Reconhecimento")
+    fale("Reconhecimento Iniciado")
+
 button = Button(2)
 
-button.when_pressed = say_hello
+button.when_pressed = reconhecimento
 
 pause()
