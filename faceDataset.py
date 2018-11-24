@@ -19,7 +19,7 @@ def main():
     face_detector = cv2.CascadeClassifier('train/haarcascade_frontalface_default.xml')
 
     # For each person, enter one numeric face id
-    face_id = input('\n informe o id do usuario e digite enter <return> ==>  ')
+    face_id = 1
 
     print("\n [INFO] Inicializando processo de captura ...")
     # Initialize individual sampling face count

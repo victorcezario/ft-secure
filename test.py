@@ -11,6 +11,10 @@ from signal import pause
 from num2words import num2words
 from subprocess import call
 
+import faceDataset
+import faceTraining
+import faceRecognition
+
 def escreva(texto):
     DC = 23
     RST = 24
@@ -45,6 +49,8 @@ def reconhecimento():
     print("Hello!")
     escreva("Reconhecimento")
     fale("Reconhecimento Iniciado")
+    faceDataset.main()
+    faceTraining.main()
 
 button_one = Button(2)
 
