@@ -12,6 +12,7 @@ Developed by Marcelo Rovai - MJRoBot.org @ 21Feb18
 import cv2
 import os
 def main():
+    antes = datetime.now() # #contagem de timeout
     cam = cv2.VideoCapture(0)
     cam.set(3, 640) # set video width
     cam.set(4, 480) # set video height
@@ -47,7 +48,15 @@ def main():
             break
         elif count >= 30: # Take 30 face sample and stop video
             break
-
+        agora = datetime.now()
+        diff = antes - agora
+        print(diff.seconds)
+        if (diff.seconds <= 86385):
+            print("Tempo Esgotado")
+            cv2.destroyAllWindows()
+            return False
+            break
+        k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
     # Do a bit of cleanup
     print("\n [INFO] Finalizando Programa")
     cam.release()

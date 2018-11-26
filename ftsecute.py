@@ -29,7 +29,7 @@ def writeDisplay(texto):
 #Funcion reconhecimento
 def reconhecimento():
       speakText("Reconhecimento Iniciado")
-      writeDisplay("Reconhecimento")
+      #writeDisplay("Reconhecimento")
 
 #Function treino
 def treinar():
@@ -41,7 +41,7 @@ def capturar():
 
 def excluir():
    treinar()
-   
+
 writeDisplay("Bem Vindo")
 speakText("Ola Seja bem vindo ao FT Secure")
 
