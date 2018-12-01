@@ -8,3 +8,10 @@ Python
 
 # Libraries
 Opencv + Adafruit Nokia LCD
+
+# Tools
+Raspberry Pi Model B
+Buttons
+USB WebCam
+Display LCD Nokia 5110
+Jumpers
