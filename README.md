@@ -4,14 +4,14 @@ Raspberry Project - Positivo University
 
 - ![alt text](https://raw.githubusercontent.com/victorcezario/positivo-ft-secure/master/Logo.PNG)
 # Language
-Python
+- Python
 
 # Libraries
-Opencv + Adafruit Nokia LCD
+- Opencv + Adafruit Nokia LCD
 
 # Tools
-Raspberry Pi Model B
-Buttons
-USB WebCam
-Display LCD Nokia 5110
-Jumpers
+- Raspberry Pi Model B
+- Buttons
+- USB WebCam
+- Display LCD Nokia 5110
+- Jumpers
