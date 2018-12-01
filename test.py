@@ -93,7 +93,7 @@ def imagem():
     disp.display()
 def fale(texto):
     cmd_beg= 'espeak -vpt-br "'
-    cmd_end= '" 2>/dev/null'
+    cmd_end= '" -s 150 2>/dev/null'
     call([cmd_beg+texto+cmd_end], shell=True)
 def inicio():
     imagem()

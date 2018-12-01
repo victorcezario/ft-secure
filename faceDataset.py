@@ -1,16 +1,7 @@
-''''
-Capture multiple Faces from multiple users to be stored on a DataBase (dataset directory)
-	==> Faces will be stored on a directory: dataset/ (if does not exist, pls create one)
-	==> Each face will have a unique numeric integer ID as 1, 2, 3, etc                       
-
-Based on original code by Anirban Kar: https://github.com/thecodacus/Face-Recognition    
-
-Developed by Marcelo Rovai - MJRoBot.org @ 21Feb18    
-
-'''
-
 import cv2
 import os
+from time import sleep
+from datetime import datetime
 def main():
     antes = datetime.now() # #contagem de timeout
     cam = cv2.VideoCapture(0)
@@ -51,16 +42,13 @@ def main():
         agora = datetime.now()
         diff = antes - agora
         print(diff.seconds)
-        if (diff.seconds <= 86385):
+        if (diff.seconds <= 86370):
             print("Tempo Esgotado")
             cv2.destroyAllWindows()
             return False
             break
-        k = cv2.waitKey(10) & 0xff # Press 'ESC' for exiting video
     # Do a bit of cleanup
     print("\n [INFO] Finalizando Programa")
     cam.release()
     cv2.destroyAllWindows()
     return True
-
-
